@@ -2108,7 +2108,7 @@
                                                 <div class="row align-items-center">
                                                     
                                                     <div class="col-sm-6 mb-2 mb-sm-0 text-right">
-                                                        <h6 class="mb-0">Lemmon</h6>
+                                                        <h6 class="mb-0">Lemmon and mint</h6>
                                                         <span class="text-muted text-sm"></span>
                                                     </div>
                                                                                                         <div class="col-sm-6 text-sm-left">
