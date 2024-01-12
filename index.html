@@ -37,7 +37,7 @@ h1 {
 }
 .accordion-item-header {
   padding: 0.5rem 3rem 0.5rem 1rem;
-  min-height: 20rem;
+  min-height: 25rem;
   line-height: 1.25rem;
   font-weight: bold;
   display: flex;
@@ -75,6 +75,39 @@ h1 {
 
 
 </style>
+<style>
+  .accordion-item-body-content {
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  .item {
+    background-color: rgba(167, 167, 167, 0.7); /* Transparent white background */
+    padding: 80px; /* Adjust padding as needed */
+    border-radius: 10px; /* Rounded corners for the rectangle */
+    margin-bottom: 10px; /* Adjust margin between items as needed */
+    font-size: 25px; /* Adjust font size as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+.price {
+    order: -1; /* This moves the price to the beginning of the flex container */
+  }
+  .item-name {
+    order: 1; /* Place the item name first in the visual order */
+    /* Your item name styles */
+}
+
+.muted-text {
+    order: 2; /* Place the muted text second in the visual order */
+    color: #777; /* Use your preferred muted color */
+    font-size: 0.85em; /* Adjust font size as needed */
+}
+
+</style>
+
 
 </head>
 
@@ -82,51 +115,257 @@ h1 {
 <body>
 <div class="accordion">
   <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/K8L5CNRC/1-1.png'); background-size: cover; background-position: center; color: #fff;">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/QNBtcYJW/42.png'); background-size: cover; background-position: center; color: #fff;">
     
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        صحن حمص
-     </div>
-     <div class="accordion-item-body-content">
-      صحن حمص
-   </div>
-   <div class="accordion-item-body-content">
-    صحن حمص
- </div>
+        <div class="item">
+          <span>صحن فول</span>
+          <div class="price">1.70 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن فلافل</span>
+          <div class="price">1.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فخارة بيض</span>
+          <div class="price">1.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فخارة بيض وجبنة</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فخارة بيض و نقانق</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فخارة بيض وبندورة</span>
+          <div class="price">2.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>شنقليش</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن حمص</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>حمص بيروتي</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>حمص باللحمة والمكسرات</span>
+          <div class="muted-text" ><br>وزن اللحمة صافي (200) غرام</div>
+
+         
+          <div class="price">5.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>متبل باذنجان</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>بابا غنوج</span>
+          <div class="price">2.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>تيركي (صغير)</span>
+          <div class="price">1.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>زبدة و مربى (مشمش / فراولة )</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>جبنة صفراء</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>جبنة فيتا</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>جبنة بيضاء</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>مقدوس</span>
+          <div class="price">1.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>زيتون</span>
+          <div class="price">0.80 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>مخلل</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قلاية بندورة</span>
+          <div class="price">2.60 JOD</div>
+      </div>
+      
+      <div class="item">
+        <div class="item-name">حمص باللحمة والمكسرات</div>
+        <div class="muted-text">وزن اللحمة صافي (200) غرام</div>
+      <div class="price">5.50 JOD</div>
+      </div>
+    
+      <div class="item">
+          <span>مفركة بطاطا</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>نقانق بالخضار</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فتة حمص</span>
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>كبة مقلية (٤ حبات )</span>
+          <div class="price">2.15 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن بطاطا</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن بطاطا و جبنة</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سمبوسك (جبنة) (4حبات)</span>
+          <div class="price">1.60 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن سيرفس</span>
+          <div class="price">1.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قرص عجة</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>موزاريلا ستيك ( 5 حبات)</span>
+          <div class="price">2.75 JOD</div>
+      </div>
+      </div> 
+     
     </div>
   </div>
   <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/Dy80gr6G/4-2.png'); background-size: cover; background-position: center; color: #fff;">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/wTJfxTzv/39-1.png'); background-size: cover; background-position: center; color: #fff;">
       
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-       كبه
+        <div class="item">
+          <span>طبيلة خيرات بلادي</span>
+          <div class="muted-text" >( عرض فطور)</div>
+          <div class="price">15.00 JOD</div>
       </div>
-      <div class="accordion-item-body-content">
-        كبه
-       </div>
-       <div class="accordion-item-body-content">
-        كبه
-       </div>
-    </div>
+      
+      <div class="item">
+          <span>بكج الحب</span>
+          <div class="muted-text" >لشخصين) عشاء او غداء + حلويات طلة القدس + سوفت درينك + مياه + زينه (بلالين هيليوم و ورد ناشف و شموع)</div>
+          <div class="price">65.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>بكج الشتوية</span>
+          <div class="muted-text" >2 ارجيلة طلة القدس + منقل (بطاطا حلوة و كستناء) + شلال شوكلاتة + مارشميلو + 4 شبس + 4 بوشار + 4 مكسرات</div>
+          <div class="price">55.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>لحالي احلالي</span>
+          <div class="muted-text" >او حلويات طلة القدس + ارجيلة + سوفت او هوت درينك + مياه pasta (شخص واحد)</div>
+          <div class="price">8.00 JOD</div>
+      </div>
+      </div>      
+    
   </div>
   <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/RZ2CChkn/5-2.png'); background-size: cover; background-position: center; color: #fff;">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/QC6r0CWp/24-1.png'); background-size: cover; background-position: center; color: #fff;">
     </div>
     <div class="accordion-item-body">
-        <div class="accordion-item-body-content">
-         كبه
+      <div class="accordion-item-body-content">
+        <div class="item">
+            <span>مشكل 1كيلو</span>
+            <div class="price">20.00 JOD</div>
         </div>
-        <div class="accordion-item-body-content">
-          كبه
-         </div>
-         <div class="accordion-item-body-content">
-          كبه
+    
+        <div class="item">
+            <span>مشكل نصف كيلو</span>
+            <div class="price">10.00 JOD</div>
         </div>
-    </div>     
+    
+        <div class="item">
+            <span>شقف 1كيلو</span>
+            <div class="price">22.00 JOD</div>
+        </div>
+    
+        <div class="item">
+            <span>شقف نصف كيلو</span>
+            <div class="price">11.00 JOD</div>
+        </div>
+    
+        <div class="item">
+            <span>كباب 1 كيلو</span>
+            <div class="price">19.00 JOD</div>
+        </div>
+    
+        <div class="item">
+            <span>كباب نصف كيلو</span>
+            <div class="price">9.50 JOD</div>
+        </div>
+    
+        <div class="item">
+            <span>شيش طاووق 1 كيلو</span>
+            <div class="price">18.00 JOD</div>
+        </div>
+    
+        <div class="item">
+            <span>شيش طاووق نصف كيلو</span>
+            <div class="price">9.00 JOD</div>
+        </div>
+    </div>
+    
+    
   </div>
   <div class="accordion-item">
     <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/3w0Lh76t/8-1.png'); background-size: cover; background-position: center; color: #fff;">
@@ -134,179 +373,872 @@ h1 {
 
     </div>
     <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        سلطه
-
-      </div>
+      <div class="item">
+        <span>(1/2) صاجية لحمة</span>
+        <div class="price">JD 18.00 الكيلو</div>
+        <div class="price">9.00 JOD</div>
     </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/sDhWcXkf/9-1.png'); background-size: cover; background-position: center; color: #fff;">
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        اي اشي
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/BnTf2r47/14.png'); background-size: cover; background-position: center; color: #fff;">
-
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        سلطه
-
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/Dfq7F4bb/17-1.png'); background-size: cover; background-position: center; color: #fff;">
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        اي اشي
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/xjFhw06b/18-1.png'); background-size: cover; background-position: center; color: #fff;">
-   
-
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        سلطه
-
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/59nQ1rzz/19-1.png'); background-size: cover; background-position: center; color: #fff;">
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        اي اشي
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/SsyQvWy4/clearoff.jpg'); background-size: cover; background-position: center; color: #fff;">
     
+    <div class="item">
+        <span>فخارة جاج</span>
+        <div class="price">6.75 JOD</div>
+    </div>
+    
+    <div class="item">
+        <span>صاجية سمك (1/2 كيلو)</span>
+        <div class="price">الكيلو 12.00 JD</div>
+        <div class="price">6.00 JOD</div>
+    </div>
+    
+    <div class="item">
+        <span>فخارة دجاج بالكريمة</span>
+        <div class="price">7.50 JOD</div>
+    </div>
+    
+    
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/hjjf4hdQ/28-1.png'); background-size: cover; background-position: center; color: #fff;">
+
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        صحن حمص
-     </div>
-     <div class="accordion-item-body-content">
-      صحن حمص
-   </div>
-   <div class="accordion-item-body-content">
-    صحن حمص
- </div>
-    </div>
+        <div class="item">
+          <span>فوسيلي وايت صوص</span>
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>إسباجيتي بلونيز</span>
+          <span>(لحمة&صوص البندورة)</span>
+          <div class="price">3.75 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فوتوتشيني</span>
+          <span>JD 3.90 فوتوشيني مع جاج</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>لازانيا باللحمة</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>بنا اربياتا</span>
+          <span>( صوص روزية )</span>
+          <div class="price">2.60 JOD</div>
+      </div>
+      </div>      
+    
   </div>
   <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/Dy80gr6G/4-2.png'); background-size: cover; background-position: center; color: #fff;">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/rs8ZRCQw/27.png'); background-size: cover; background-position: center; color: #fff;">
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <div class="item">
+          <span>سلطة طلة القدس</span>
+          <div class="price">6.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>تبولة الأنناس</span>
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>تبولة</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>يلنجي</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة سيزر</span>
+          <div class="price">2.80 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سيزر مع دجاج</span>
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة فلاحية</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>بقدونسية</span>
+          <div class="price">2.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>خيار باللبن</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة تركية</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن مقبلات مكس</span>
+          <div class="price">(محمرة ، لبنة حارة بالجوز ، سلطة تركية ، متبل شمندر )</div>
+          <div class="price">3.75 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة جرجير</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة يونانية</span>
+          <div class="price">2.80 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة فتوش</span>
+          <div class="price">2.70 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة ذرة</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة كولسلو</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>متبل باذنجان</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن حمص</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>بابا غنوج صغير</span>
+          <div class="price">2.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن لبن رايب</span>
+          <div class="price">1.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سلطة عربية</span>
+          <div class="price">2.15 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>متبل شمندر</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>محمرة</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>لبنة حارة بالجوز</span>
+          <div class="price">2.00 JOD</div>
+      </div>
       
     </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-       كبه
-      </div>
-      <div class="accordion-item-body-content">
-        كبه
-       </div>
-       <div class="accordion-item-body-content">
-        كبه
-       </div>
-    </div>
+    
   </div>
   <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/RZ2CChkn/5-2.png'); background-size: cover; background-position: center; color: #fff;">
-    </div>
-    <div class="accordion-item-body">
-        <div class="accordion-item-body-content">
-         كبه
-        </div>
-        <div class="accordion-item-body-content">
-          كبه
-         </div>
-         <div class="accordion-item-body-content">
-          كبه
-        </div>
-    </div>     
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/3w0Lh76t/8-1.png'); background-size: cover; background-position: center; color: #fff;">
-      
-
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        سلطه
-
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/sDhWcXkf/9-1.png'); background-size: cover; background-position: center; color: #fff;">
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        اي اشي
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/BnTf2r47/14.png'); background-size: cover; background-position: center; color: #fff;">
-
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        سلطه
-
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/Dfq7F4bb/17-1.png'); background-size: cover; background-position: center; color: #fff;">
-    </div>
-    <div class="accordion-item-body">
-      <div class="accordion-item-body-content">
-        اي اشي
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/xjFhw06b/18-1.png'); background-size: cover; background-position: center; color: #fff;">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/MGv5fWBg/40-2.png'); background-size: cover; background-position: center; color: #fff;">
    
 
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        سلطه
+        <div class="item">
+          <span>ذرة بالزبدة والبابريكا</span>
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>بطاطا حلوة</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>كستناء</span>
+          <span>10 حبات</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      </div>      
+    
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/59nQ1rzz/19-1.png'); background-size: cover; background-position: center; color: #fff;">
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <div class="item">
+          <span>بطاطا حارة</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>ناتشوز</span>
+          <div class="price">6.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>كبة مقلية</span>
+          <span>(٤ حبات)</span>
+          <div class="price">2.15 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قلاية بندورة باللحمة والمكسرات</span>
+          <div class="price">5.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>حمص باللحمة والمكسرات</span>
+          <div class="price">5.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن بطاطا بالجبنة</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>صحن بطاطا</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سمبوسك</span>
+          <span>(4 حبات)(جبنة)</span>
+          <div class="price">1.60 JOD</div>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/SsyQvWy4/clearoff.jpg'); background-size: cover; background-position: center; color: #fff;"></div>
+     <div class="accordion-item-body-content">
+      <div class="item">
+        <span>مشروب تمر الطلة</span>
+        <span>مع رشة قرفة خذو و ادعيلي</span>
+        <div class="price">3.00 JOD</div>
+      </div> 
+    </div>
+  </div>
+  </div>
 
-      </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/BnV0M4g5/44-1.png'); background-size: cover; background-position: center; color: #fff;">
+      
     </div>
+    <div class="accordion-item-body">
+
+      <div class="accordion-item-body-content">
+        <div class="item">
+          <span>قهوة تركية سنجل</span>
+          <div class="price">1.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قهوة تركية دبل</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>اسبريسو شوت</span>
+          <div class="price">1.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>اسبريسو دبل شوت</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>اميريكانو كوفي</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>ميكاياتو</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>كابتشينو</span>
+          <span>( يتوفر حليب خالي الدسم ) ( اختار النكهة )</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>لاتيه</span>
+          <span>( يتوفر حليب خالي الدسم ) ( اختار النكهة: بندق, كاراميل, فانيلا )</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>كراميل ميكاتو</span>
+          <div class="price">2.95 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قهوة فرنسية</span>
+          <div class="price">2.95 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سبانيش لاتيه</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>كوفي موكا</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>وايت موكا</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>هوت شوكليت طلة القدس</span>
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>هوت شوكليت</span>
+          <span>بندق / جوز هند</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قهوة طلة القدس</span>
+          <span>( مكونات خاصة )</span>
+          <div class="price">2.95 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>نسكافيه</span>
+          <div class="price">2.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قهوة استوائية</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>افكاتو</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>كريم بورليه</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>شاي</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>بندول الطلة</span>
+          <span>( الشافي الله بس احنا بنحاول )</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>زهورات</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>سحلب طلة القدس</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>شاي كرك</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>حليب و ورد و زعفران</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>زنجبيل بالحليب</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>زنجبيل و عسل و ليمون</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قرفة و جوز</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>شوربة عدس</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      </div>      
+     
   </div>
   <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/59nQ1rzz/19-1.png'); background-size: cover; background-position: center; color: #fff;">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/9fQ0mr35/29-1.png'); background-size: cover; background-position: center; color: #fff;">
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        اي اشي
+        <div class="item">
+          <span>فرابيه طلة القدس</span>
+          <div class="price">3.50 JOD</div>
       </div>
+      
+      <div class="item">
+          <span>فرابيه كرمل</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>موكا فرابيه</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فرابيه ڤنيلا</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>آيس لاتيه</span>
+          <span>( اختار النكهة )</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>آيس موكا</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>آيس وايت موكا</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>آيس كراميل ميكاتو</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>آيس تي</span>
+          <span>خوخ / ليمون / باشن فروت</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>موهيتو كلاسك</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>موهيتو باشن فروت</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>موهيتو باشن فروت</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>موهيتو ورد</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>موهيتو راز بيري</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>مكس الطاقة</span>
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>مكس بلو اوشن</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>مشروبات غازية</span>
+          <span>( بيبسي / ميرندا / سفن )</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>شنينة</span>
+          <div class="price">1.00 JOD</div>
+      </div>
+      
+      
     </div>
+    
+  </div>
+ 
   </div>
   <div class="accordion-item">
-    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/59nQ1rzz/19-1.png'); background-size: cover; background-position: center; color: #fff;">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/7YTY49DS/32-1.png'); background-size: cover; background-position: center; color: #fff;">
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        اي اشي
+        <div class="item">
+          <span>🍊برتقال</span>
+          <div class="price">2.00 JOD</div>
       </div>
+      
+      <div class="item">
+          <span>🍋ليمون</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍋🍃ليمون ونعنع</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🥝كيوي</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍓فراولة</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🥭مانجا</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍍أناناس</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍓🥝كيوي و فرولة</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍓🥭فرولة و منجا</span>
+          <div class="price">2.99 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🥝🍋كيوي و ليمون</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🥭🍓🥝مكس فروت</span>
+          <div class="price">2.99 JOD</div>
+      </div>
+      
     </div>
+    
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/MTpqL2zm/33-1.png'); background-size: cover; background-position: center; color: #fff;">
+
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <div class="item">
+          <span>🍌موز وحليب</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🥑أفوكادو مع عسل وفستق حلبي</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍋ليمون سموذي</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍋🍃ليمون ونعنع سموذي</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🥭منجا سموذي</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍓فرولة سموذي</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🥗روكا ليمونيد</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍓ستروبري سور</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍍بيناكولادا</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍹جمايكا</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍹بندول الطلة (الله الشافي بس احنا بنحاول)</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🥥كوكو لافندر</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍍🍑باشن فروت كريمي</span>
+          <div class="price">3.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍹بورتا إبل</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍹سمر ديلايت</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍹ديلايت طلة القدس</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍹بلادي ميري</span>
+          <div class="price">2.50 JOD</div>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/FFbwLnm9/34-1.png'); background-size: cover; background-position: center; color: #fff;">
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <div class="item">
+          <span> شيك طلة القدس ريد ڤيلڤت (اشي من الاخر )</span>
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span> شيك نورمل ( ڤنيلا / شوكلت / فرولة )</span>
+          <div class="price">2.75 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span> شيك سبشل ( اوريو / سنكرز / لوتس / كروكان / عربية / تشيز كيك )</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/L50tPp8C/36-1.png'); background-size: cover; background-position: center; color: #fff;">
+   
+
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <div class="item">
+          <span>🍦إيس كريم سبشل ( أوريو / كروكان / تشيز كيك / عربية / لوتس / سنكرز )</span>
+          <div class="price">2.25 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍦ايس كريم نورمل ( فرولة / ڤنيلا / شوكلت )</span>
+          <div class="price">1.99 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍦سنو ليدي</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍦توتي فروتي</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍦ثريو تشوكلت</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/8C9sLzRr/37-1.png'); background-size: cover; background-position: center; color: #fff;">
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <div class="item">
+          <span>🍏🍎تفاحتين نخلة</span>
+          <div class="price">4.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍏🍎تفاحتين مزايا</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍋🍃ليمون ونعنع</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍉🍃بطيخ ونعنع</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍇🫐عنب وتوت</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>علكة ونعنع</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🫐بلوبيري</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>علكة سهم</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>LOVE❤️</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>🍇عنب</span>
+          <div class="price">4.00 JOD</div>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/NjSWJPQ9/38-1.png'); background-size: cover; background-position: center; color: #fff;">
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <div class="item">
+          <span>كريب كلاسيك</span>
+         
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>وافل</span>
+      
+          <div class="price">3.50 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فخارة أم علي (5أشخاص)</span>
+          <div class="price">6.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>فخارة ام علي (شخصين)</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>تيرامسو</span>
+          <div class="price">3.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>حلو خشخش</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>قالب كيك وسط 10 أشخاص</span>
+          <div class="price">10.00 JOD</div>
+      </div>
+      
+      <div class="item">
+          <span>مهلبية</span>
+          <div class="price">2.00 JOD</div>
+      </div>
+      
+    </div>
+    
   </div>
 </div>
 
