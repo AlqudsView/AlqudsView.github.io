@@ -1,12 +1,51 @@
 <html>
   <head>
+    <header>
+        <img src="https://i.postimg.cc/Dy3vsssW/logo-removebg-preview.png" alt="Logo">
+        <!-- Replace 'your-logo-url.png' with the actual URL or path to your logo -->
+        <p>مطعم وكافيه طلة القدس</p>
+    </header>
 
     <a class="weatherwidget-io" href="https://forecast7.com/en/32d0435d73/as-salt/" data-label_1="AL-SALT" data-label_2="WEATHER" data-font="Roboto Slab" data-theme="weather_one" >AL-SALT WEATHER</a>
 
-    <title>FAQ</title>
+    <title>AlqudsView Resturant & cafe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gulzar&display=swap" rel="stylesheet">
+	
 <style>
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+p {
+
+    font-family: 'Gulzar', serif;
+    font-size: 25px;
+
+}
+
+header {
+    position: sticky;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    background-color: #13A5F9;
+    padding: 10px;
+    height: 150;
+    border-radius: 0 ;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+}
 
 * {
   margin: 0;
@@ -17,7 +56,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-image: url('');
   color: #fff;
-}
+}                                                                                                                    
 
 h1 {
   text-align: center;
@@ -92,7 +131,7 @@ h1 {
   }
 
   .item {
-    background-color: rgba(167, 167, 167, 0.7); /* Transparent white background */
+    background-color: rgb(6, 152, 185); /* Transparent white background */
     padding: 80px; /* Adjust padding as needed */
     border-radius: 10px; /* Rounded corners for the rectangle */
     margin-bottom: 10px; /* Adjust margin between items as needed */
@@ -100,23 +139,96 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    box-shadow: #111;
   }
 
-.price {
-    order: -1; /* This moves the price to the beginning of the flex container */
-  }
-  .item-name {
-    order: 1; /* Place the item name first in the visual order */
-    /* Your item name styles */
+  .item span {
+    order: 2; /* Place the span on the right side */
+    font-size: 32px;
+    color: #fff;
 }
+
 
 .muted-text {
     order: 2; /* Place the muted text second in the visual order */
-    color: #777; /* Use your preferred muted color */
+    color: #858585; /* Use your preferred muted color */
     font-size: 0.85em; /* Adjust font size as needed */
 }
+.price-button {
+    order: 1; /* Place the price button on the left side */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+
+</style>
+
+<style>
+   
+   .popup-container {
+        display: none;
+        position: fixed;
+        top: 60%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        max-width: 500px; /* Set your desired maximum width */
+        width: 170%; /* Make it responsive */
+    }
+
+    .popup-content {
+        text-align: right;
+        font-size: 20px;
+    }
+
+        .popup-button {
+    background-color: #ffb43b;
+    color: #333;
+    border: none;
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0; /* Set to bottom of the screen */
+    left: 0;
+    transform: translate(0, 0); /* Update the translation to (0, 0) */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.popup-button img {
+    max-width: 100%; /* Make sure the image does not exceed the button size */
+    max-height: 100%; /* Make sure the image does not exceed the button size */
+}
+.clear-button {
+    background-color: #ff4444; /* Red background color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+
+
+    </style>
 </style>
 
 
@@ -132,168 +244,166 @@ h1 {
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
         <div class="item">
-          <span>صحن فول</span>
-          <div class="price">1.70 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن فلافل</span>
-          <div class="price">1.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فخارة بيض</span>
-          <div class="price">1.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فخارة بيض وجبنة</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فخارة بيض و نقانق</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فخارة بيض وبندورة</span>
-          <div class="price">2.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>شنقليش</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن حمص</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>حمص بيروتي</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>حمص باللحمة والمكسرات</span>
-          <div class="muted-text" ><br>وزن اللحمة صافي (200) غرام</div>
-
-         
-          <div class="price">5.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>متبل باذنجان</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>بابا غنوج</span>
-          <div class="price">2.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>تيركي (صغير)</span>
-          <div class="price">1.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>زبدة و مربى (مشمش / فراولة )</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>جبنة صفراء</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>جبنة فيتا</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>جبنة بيضاء</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>مقدوس</span>
-          <div class="price">1.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>زيتون</span>
-          <div class="price">0.80 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>مخلل</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قلاية بندورة</span>
-          <div class="price">2.60 JOD</div>
-      </div>
-      
-      <div class="item">
-        <div class="item-name">حمص باللحمة والمكسرات</div>
-        <div class="muted-text">وزن اللحمة صافي (200) غرام</div>
-      <div class="price">5.50 JOD</div>
-      </div>
-    
-      <div class="item">
-          <span>مفركة بطاطا</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>نقانق بالخضار</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فتة حمص</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>كبة مقلية (٤ حبات )</span>
-          <div class="price">2.15 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن بطاطا</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن بطاطا و جبنة</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سمبوسك (جبنة) (4حبات)</span>
-          <div class="price">1.60 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن سيرفس</span>
-          <div class="price">1.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قرص عجة</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>موزاريلا ستيك ( 5 حبات)</span>
-          <div class="price">2.75 JOD</div>
-      </div>
+            <span>صحن فول</span>
+            <button class="price-button" onclick="addItem('صحن فول', 1, 1.70)">1.70 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن فلافل</span>
+            <button class="price-button" onclick="addItem('صحن فلافل', 1, 1.25)">1.25 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة بيض</span>
+            <button class="price-button" onclick="addItem('فخارة بيض', 1, 1.50)">1.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة بيض وجبنة</span>
+            <button class="price-button" onclick="addItem('فخارة بيض وجبنة', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة بيض و نقانق</span>
+            <button class="price-button" onclick="addItem('فخارة بيض و نقانق', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة بيض وبندورة</span>
+            <button class="price-button" onclick="addItem('فخارة بيض وبندورة', 1, 2.25)">2.25 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>شنقليش</span>
+            <button class="price-button" onclick="addItem('شنقليش', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن حمص</span>
+            <button class="price-button" onclick="addItem('صحن حمص', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>حمص بيروتي</span>
+            <button class="price-button" onclick="addItem('حمص بيروتي', 1, 2.50)">2.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>حمص باللحمة والمكسرات</span>
+            <button class="price-button" onclick="addItem('حمص باللحمة والمكسرات', 1, 5.00)">5.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>متبل باذنجان</span>
+            <button class="price-button" onclick="addItem('متبل باذنجان', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>بابا غنوج</span>
+            <button class="price-button" onclick="addItem('بابا غنوج', 1, 2.25)">2.25 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>تيركي</span>
+            <button class="price-button" onclick="addItem('تيركي', 1, 1.50)">1.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>زبدة و مربى (مشمش / فراولة)</span>
+            <button class="price-button" onclick="addItem('زبدة و مربى (مشمش / فراولة)', 1, 1.00)">1.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>جبنة صفراء</span>
+            <button class="price-button" onclick="addItem('جبنة صفراء', 1, 1.00)">1.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>جبنة فيتا</span>
+            <button class="price-button" onclick="addItem('جبنة فيتا', 1, 1.00)">1.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>جبنة بيضاء</span>
+            <button class="price-button" onclick="addItem('جبنة بيضاء', 1, 1.00)">1.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>مقدوس</span>
+            <button class="price-button" onclick="addItem('مقدوس', 1, 1.50)">1.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>زيتون</span>
+            <button class="price-button" onclick="addItem('زيتون', 1, 0.80)">0.80 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>مخلل</span>
+            <button class="price-button" onclick="addItem('مخلل', 1, 1.00)">1.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>قلاية بندورة</span>
+            <button class="price-button" onclick="addItem('قلاية بندورة', 1, 2.60)">2.60 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>قلاية بندورة باللحمة والمكسرات</span>
+            <button class="price-button" onclick="addItem('قلاية بندورة باللحمة والمكسرات', 1, 5.50)">5.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>مفركة بطاطا</span>
+            <button class="price-button" onclick="addItem('مفركة بطاطا', 1, 2.50)">2.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>نقانق بالخضار</span>
+            <button class="price-button" onclick="addItem('نقانق بالخضار', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فتة حمص</span>
+            <button class="price-button" onclick="addItem('فتة حمص', 1, 3.50)">3.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>كبة مقلية (٤ حبات)</span>
+            <button class="price-button" onclick="addItem('كبة مقلية (٤ حبات)', 1, 2.15)">2.15 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن بطاطا</span>
+            <button class="price-button" onclick="addItem('صحن بطاطا', 1, 2.50)">2.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن بطاطا و جبنة</span>
+            <button class="price-button" onclick="addItem('صحن بطاطا و جبنة', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سمبوسك (جبنة) (4حبات)</span>
+            <button class="price-button" onclick="addItem('سمبوسك (جبنة) (4حبات)', 1, 1.60)">1.60 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن سيرفس</span>
+            <button class="price-button" onclick="addItem('صحن سيرفس', 1, 1.50)">1.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>قرص عجة</span>
+            <button class="price-button" onclick="addItem('قرص عجة', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>موزاريلا ستيك ( 5 حبات)</span>
+            <button class="price-button" onclick="addItem('موزاريلا ستيك ( 5 حبات)', 1, 2.75)">2.75 JOD</button>
+        </div>
+        
+        
       </div> 
      
     </div>
@@ -304,28 +414,25 @@ h1 {
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
         <div class="item">
-          <span>طبيلة خيرات بلادي</span>
-          <div class="muted-text" >( عرض فطور)</div>
-          <div class="price">15.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>بكج الحب</span>
-          <div class="muted-text" >لشخصين) عشاء او غداء + حلويات طلة القدس + سوفت درينك + مياه + زينه (بلالين هيليوم و ورد ناشف و شموع)</div>
-          <div class="price">65.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>بكج الشتوية</span>
-          <div class="muted-text" >2 ارجيلة طلة القدس + منقل (بطاطا حلوة و كستناء) + شلال شوكلاتة + مارشميلو + 4 شبس + 4 بوشار + 4 مكسرات</div>
-          <div class="price">55.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>لحالي احلالي</span>
-          <div class="muted-text" >او حلويات طلة القدس + ارجيلة + سوفت او هوت درينك + مياه pasta (شخص واحد)</div>
-          <div class="price">8.00 JOD</div>
-      </div>
+            <span>طبيلة خيرات بلادي</span>
+            <button class="price-button" onclick="addItem('طبيلة خيرات بلادي', 1, 15.00)">15.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>&nbsp;بكج الحب </span>
+            <button class="price-button" onclick="addItem('بكج الحب', 1, 65.00)">65.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>بكج الشتوية</span>
+            <button class="price-button" onclick="addItem('بكج الشتوية', 1, 55.00)">55.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>لحالي احلالي</span>
+            <button class="price-button" onclick="addItem('لحالي احلالي', 1, 8.00)">8.00 JOD</button>
+        </div>
+        
       </div>      
     
   </div>
@@ -335,44 +442,46 @@ h1 {
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
         <div class="item">
-            <span>مشكل 1كيلو</span>
-            <div class="price">20.00 JOD</div>
+            <span>مشكل 1 كيلو</span>
+            <button class="price-button" onclick="addItem('مشكل 1 كيلو', 1, 20.00)">20.00 JOD</button>
         </div>
-    
+        
         <div class="item">
             <span>مشكل نصف كيلو</span>
-            <div class="price">10.00 JOD</div>
+            <button class="price-button" onclick="addItem('مشكل نصف كيلو', 1, 10.00)">10.00 JOD</button>
         </div>
-    
+        
         <div class="item">
-            <span>شقف 1كيلو</span>
-            <div class="price">22.00 JOD</div>
+            <span>شقف 1 كيلو</span>
+            <button class="price-button" onclick="addItem('شقف 1 كيلو', 1, 22.00)">22.00 JOD</button>
         </div>
-    
+        
         <div class="item">
             <span>شقف نصف كيلو</span>
-            <div class="price">11.00 JOD</div>
+            <button class="price-button" onclick="addItem('شقف نصف كيلو', 1, 11.00)">11.00 JOD</button>
         </div>
-    
+        
         <div class="item">
             <span>كباب 1 كيلو</span>
-            <div class="price">19.00 JOD</div>
+            <button class="price-button" onclick="addItem('كباب 1 كيلو', 1, 19.00)">19.00 JOD</button>
         </div>
-    
+        
         <div class="item">
             <span>كباب نصف كيلو</span>
-            <div class="price">9.50 JOD</div>
+            <button class="price-button" onclick="addItem('كباب نصف كيلو', 1, 9.50)">9.50 JOD</button>
         </div>
-    
+        
         <div class="item">
             <span>شيش طاووق 1 كيلو</span>
-            <div class="price">18.00 JOD</div>
+            <button class="price-button" onclick="addItem('شيش طاووق 1 كيلو', 1, 18.00)">18.00 JOD</button>
         </div>
-    
+        
         <div class="item">
             <span>شيش طاووق نصف كيلو</span>
-            <div class="price">9.00 JOD</div>
+            <button class="price-button" onclick="addItem('شيش طاووق نصف كيلو', 1, 9.00)">9.00 JOD</button>
         </div>
+        
+        
     </div>
     
     
@@ -383,29 +492,25 @@ h1 {
 
     </div>
     <div class="accordion-item-body">
-      <div class="item">
-        <span>(1/2) صاجية لحمة</span>
-        <div class="price">JD 18.00 الكيلو</div>
-        <div class="price">9.00 JOD</div>
-    </div>
-    
-    <div class="item">
-        <span>فخارة جاج</span>
-        <div class="price">6.75 JOD</div>
-    </div>
-    
-    <div class="item">
-        <span>صاجية سمك (1/2 كيلو)</span>
-        <div class="price">الكيلو 12.00 JD</div>
-        <div class="price">6.00 JOD</div>
-    </div>
-    
-    <div class="item">
-        <span>فخارة دجاج بالكريمة</span>
-        <div class="price">7.50 JOD</div>
-    </div>
-    
-    
+        <div class="item">
+            <span>صاجية لحمة (1/2 كيلو)</span>
+            <button class="price-button" onclick="addItem('صاجية لحمة', 0.5, 18.00)">9.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة جاج</span>
+            <button class="price-button" onclick="addItem('فخارة جاج', 1, 6.75)">6.75 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صاجية سمك (1/2 كيلو)</span>
+            <button class="price-button" onclick="addItem('صاجية سمك', 0.5, 12.00)">6.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة دجاج بالكريمة</span>
+            <button class="price-button" onclick="addItem('فخارة دجاج بالكريمة', 1, 7.50)">7.50 JOD</button>
+        </div>
   </div>
   <div class="accordion-item">
     <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/hjjf4hdQ/28-1.png'); background-size: cover; background-position: center; color: #fff;"onclick="toggleZoomIn(this)">
@@ -414,160 +519,210 @@ h1 {
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
         <div class="item">
-          <span>فوسيلي وايت صوص</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>إسباجيتي بلونيز</span>
-          <span>(لحمة&صوص البندورة)</span>
-          <div class="price">3.75 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فوتوتشيني</span>
-          <span>JD 3.90 فوتوشيني مع جاج</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>لازانيا باللحمة</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>بنا اربياتا</span>
-          <span>( صوص روزية )</span>
-          <div class="price">2.60 JOD</div>
-      </div>
+            <span>فوسيلي وايت صوص</span>
+            <button class="price-button" onclick="addItem('فوسيلي وايت صوص', 1, 3.50)">3.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>إسباجيتي بلونيز (لحمة&صوص البندورة)</span>
+            <button class="price-button" onclick="addItem('إسباجيتي بلونيز (لحمة&صوص البندورة)', 1, 3.75)">3.75 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فوتوتشيني مع جاج</span>
+            <button class="price-button" onclick="addItem('فوتوتشيني مع جاج', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>لازانيا باللحمة</span>
+            <button class="price-button" onclick="addItem('لازانيا باللحمة', 1, 4.00)">4.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>بنا اربياتا (صوص روزية)</span>
+            <button class="price-button" onclick="addItem('بنا اربياتا (صوص روزية)', 1, 2.60)">2.60 JOD</button>
+        </div>
       </div>      
     
-  </div>
+  </div> 
+  
+  <div class="accordion-item">
+    <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/nrQtt2DM/45.png'); background-size: cover; background-position: center; color: #fff;"onclick="toggleZoomIn(this)">
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <div class="item">
+            <span>صينية منزلة بيذنجان كبير</span>
+            <button class="price-button" onclick="addItem('صينية منزلة بيذنجان كبير', 1, 6.00)">6.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صينية منزلة بيذنجان صغير</span>
+            <button class="price-button" onclick="addItem('صينية منزلة بيذنجان صغير', 1, 4.00)">4.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صينية زهرة و لحمة كبيرة</span>
+            <button class="price-button" onclick="addItem('صينية زهرة و لحمة كبيرة', 1, 6.00)">6.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صينية زهرة و لحمة صغيرة</span>
+            <button class="price-button" onclick="addItem('صينية زهرة و لحمة صغيرة', 1, 4.00)">4.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صينية كفتة بالبندورة 500غ</span>
+            <button class="price-button" onclick="addItem('صينية كفتة بالبندورة 500غ', 1, 6.00)">6.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صينية كفتة بالطحينية 500غ</span>
+            <button class="price-button" onclick="addItem('صينية كفتة بالطحينية 500غ', 1, 6.00)">6.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة راس عصفور مع الخضار</span>
+            <button class="price-button" onclick="addItem('فخارة راس عصفور مع الخضار', 1, 6.50)">6.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة زنجر</span>
+            <button class="price-button" onclick="addItem('فخارة زنجر', 1, 5.25)">5.25 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>فخارة ريش</span>
+            <button class="price-button" onclick="addItem('فخارة ريش', 1, 7.00)">7.00 JOD</button>
+        </div>
+    </div>  
+    </div>
   <div class="accordion-item">
     <div class="accordion-item-header"  style=" background-image: url('https://i.postimg.cc/rs8ZRCQw/27.png'); background-size: cover; background-position: center; color: #fff;"onclick="toggleZoomIn(this)">
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
         <div class="item">
-          <span>سلطة طلة القدس</span>
-          <div class="price">6.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>تبولة الأنناس</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>تبولة</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>يلنجي</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة سيزر</span>
-          <div class="price">2.80 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سيزر مع دجاج</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة فلاحية</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>بقدونسية</span>
-          <div class="price">2.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>خيار باللبن</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة تركية</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن مقبلات مكس</span>
-          <div class="price">(محمرة ، لبنة حارة بالجوز ، سلطة تركية ، متبل شمندر )</div>
-          <div class="price">3.75 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة جرجير</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة يونانية</span>
-          <div class="price">2.80 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة فتوش</span>
-          <div class="price">2.70 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة ذرة</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة كولسلو</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>متبل باذنجان</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن حمص</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>بابا غنوج صغير</span>
-          <div class="price">2.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن لبن رايب</span>
-          <div class="price">1.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سلطة عربية</span>
-          <div class="price">2.15 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>متبل شمندر</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>محمرة</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>لبنة حارة بالجوز</span>
-          <div class="price">2.00 JOD</div>
-      </div>
+            <span>سلطة طلة القدس</span>
+            <button class="price-button" onclick="addItem('سلطة طلة القدس', 1, 6.00)">6.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>تبولة الأنناس</span>
+            <button class="price-button" onclick="addItem('تبولة الأنناس', 1, 3.50)">3.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>تبولة</span>
+            <button class="price-button" onclick="addItem('تبولة', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>يلنجي</span>
+            <button class="price-button" onclick="addItem('يلنجي', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة سيزر</span>
+            <button class="price-button" onclick="addItem('سلطة سيزر', 1, 2.80)">2.80 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سيزر مع دجاج</span>
+            <button class="price-button" onclick="addItem('سيزر مع دجاج', 1, 3.50)">3.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة فلاحية</span>
+            <button class="price-button" onclick="addItem('سلطة فلاحية', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>بقدونسية</span>
+            <button class="price-button" onclick="addItem('بقدونسية', 1, 2.25)">2.25 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>خيار باللبن</span>
+            <button class="price-button" onclick="addItem('خيار باللبن', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة تركية</span>
+            <button class="price-button" onclick="addItem('سلطة تركية', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن مقبلات مكس</span>
+            <button class="price-button" onclick="addItem('صحن مقبلات مكس', 1, 3.75)">3.75 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة جرجير</span>
+            <button class="price-button" onclick="addItem('سلطة جرجير', 1, 2.50)">2.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة يونانية</span>
+            <button class="price-button" onclick="addItem('سلطة يونانية', 1, 2.80)">2.80 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة فتوش</span>
+            <button class="price-button" onclick="addItem('سلطة فتوش', 1, 2.70)">2.70 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة ذرة</span>
+            <button class="price-button" onclick="addItem('سلطة ذرة', 1, 2.50)">2.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة كولسلو</span>
+            <button class="price-button" onclick="addItem('سلطة كولسلو', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>متبل باذنجان</span>
+            <button class="price-button" onclick="addItem('متبل باذنجان', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن حمص</span>
+            <button class="price-button" onclick="addItem('صحن حمص', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>بابا غنوج صغير</span>
+            <button class="price-button" onclick="addItem('بابا غنوج صغير', 1, 2.25)">2.25 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن لبن رايب</span>
+            <button class="price-button" onclick="addItem('صحن لبن رايب', 1, 1.50)">1.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سلطة عربية</span>
+            <button class="price-button" onclick="addItem('سلطة عربية', 1, 2.15)">2.15 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>متبل شمندر</span>
+            <button class="price-button" onclick="addItem('متبل شمندر', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>محمرة</span>
+            <button class="price-button" onclick="addItem('محمرة', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>لبنة حارة بالجوز</span>
+            <button class="price-button" onclick="addItem('لبنة حارة بالجوز', 1, 2.00)">2.00 JOD</button>
+        </div>
+        
+        
       
     </div>
     
@@ -580,20 +735,21 @@ h1 {
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
         <div class="item">
-          <span>ذرة بالزبدة والبابريكا</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>بطاطا حلوة</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>كستناء</span>
-          <span>10 حبات</span>
-          <div class="price">3.00 JOD</div>
-      </div>
+            <span>ذرة بالزبدة والبابريكا</span>
+            <button class="price-button" onclick="addItem('ذرة بالزبدة والبابريكا', 1, 3.50)">3.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>بطاطا حلوة</span>
+            <button class="price-button" onclick="addItem('بطاطا حلوة', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>كستناء (10 حبات)</span>
+            <button class="price-button" onclick="addItem('كستناء', 10, 3.00)">3.00 JOD</button>
+        </div>
+        
+        
       </div>      
     
   </div>
@@ -603,47 +759,46 @@ h1 {
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
         <div class="item">
-          <span>بطاطا حارة</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>ناتشوز</span>
-          <div class="price">6.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>كبة مقلية</span>
-          <span>(٤ حبات)</span>
-          <div class="price">2.15 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قلاية بندورة باللحمة والمكسرات</span>
-          <div class="price">5.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>حمص باللحمة والمكسرات</span>
-          <div class="price">5.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن بطاطا بالجبنة</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>صحن بطاطا</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سمبوسك</span>
-          <span>(4 حبات)(جبنة)</span>
-          <div class="price">1.60 JOD</div>
-      </div>
-      
+            <span>بطاطا حارة</span>
+            <button class="price-button" onclick="addItem('بطاطا حارة', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>ناتشوز</span>
+            <button class="price-button" onclick="addItem('ناتشوز', 1, 6.00)">6.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>كبة مقلية (٤ حبات)</span>
+            <button class="price-button" onclick="addItem('كبة مقلية', 4, 2.15)">2.15 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>قلاية بندورة باللحمة والمكسرات</span>
+            <button class="price-button" onclick="addItem('قلاية بندورة باللحمة والمكسرات', 1, 5.50)">5.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>حمص باللحمة والمكسرات</span>
+            <button class="price-button" onclick="addItem('حمص باللحمة والمكسرات', 1, 5.00)">5.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن بطاطا بالجبنة</span>
+            <button class="price-button" onclick="addItem('صحن بطاطا بالجبنة', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>صحن بطاطا</span>
+            <button class="price-button" onclick="addItem('صحن بطاطا', 1, 2.50)">2.50 JOD</button>
+        </div>
+        
+        <div class="item">
+            <span>سمبوسك (4 حبات)(جبنة)</span>
+            <button class="price-button" onclick="addItem('سمبوسك (جبنة)', 4, 1.60)">1.60 JOD</button>
+        </div>
+        
+        
     </div>
     
   </div>
@@ -654,11 +809,11 @@ h1 {
     <div class="accordion-item-body">
 
       <div class="accordion-item-body-content">
-      <div class="item">
-        <span>مشروب تمر الطلة</span>
-        <span>مع رشة قرفة خذو و ادعيلي</span>
-        <div class="price">3.00 JOD</div>
-      </div> 
+        <div class="item">
+            <span>مشروب تمر الطلة</span>
+            <button class="price-button" onclick="addItem('مشروب تمر الطلة', 1, 3.00)">3.00 JOD</button>
+        </div>
+        
     </div>
 
   </div>
@@ -670,160 +825,159 @@ h1 {
     <div class="accordion-item-body">
 
       <div class="accordion-item-body-content">
-        <div class="item">
-          <span>قهوة تركية سنجل</span>
-          <div class="price">1.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قهوة تركية دبل</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>اسبريسو شوت</span>
-          <div class="price">1.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>اسبريسو دبل شوت</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>اميريكانو كوفي</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>ميكاياتو</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>كابتشينو</span>
-          <span>( يتوفر حليب خالي الدسم ) ( اختار النكهة )</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>لاتيه</span>
-          <span>( يتوفر حليب خالي الدسم ) ( اختار النكهة: بندق, كاراميل, فانيلا )</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>كراميل ميكاتو</span>
-          <div class="price">2.95 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قهوة فرنسية</span>
-          <div class="price">2.95 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سبانيش لاتيه</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>كوفي موكا</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>وايت موكا</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>هوت شوكليت طلة القدس</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>هوت شوكليت</span>
-          <span>بندق / جوز هند</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قهوة طلة القدس</span>
-          <span>( مكونات خاصة )</span>
-          <div class="price">2.95 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>نسكافيه</span>
-          <div class="price">2.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قهوة استوائية</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>افكاتو</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>كريم بورليه</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>شاي</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>بندول الطلة</span>
-          <span>( الشافي الله بس احنا بنحاول )</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>زهورات</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>سحلب طلة القدس</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>شاي كرك</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>حليب و ورد و زعفران</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>زنجبيل بالحليب</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>زنجبيل و عسل و ليمون</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قرفة و جوز</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>شوربة عدس</span>
-          <div class="price">2.00 JOD</div>
-      </div>
+       <!-- Hot Beverages -->
+<div class="item">
+    <span>قهوة تركية سنجل</span>
+    <button class="price-button" onclick="addItem('قهوة تركية سنجل', 1, 1.25)">1.25 JOD</button>
+</div>
+
+<div class="item">
+    <span>قهوة تركية دبل</span>
+    <button class="price-button" onclick="addItem('قهوة تركية دبل', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>اسبريسو شوت</span>
+    <button class="price-button" onclick="addItem('اسبريسو شوت', 1, 1.50)">1.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>اسبريسو دبل شوت</span>
+    <button class="price-button" onclick="addItem('اسبريسو دبل شوت', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>اميريكانو كوفي</span>
+    <button class="price-button" onclick="addItem('اميريكانو كوفي', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>ميكاياتو</span>
+    <button class="price-button" onclick="addItem('ميكاياتو', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>كابتشينو</span>
+    <button class="price-button" onclick="addItem('كابتشينو', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>لاتيه</span>
+    <button class="price-button" onclick="addItem('لاتيه', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>كراميل ميكاتو</span>
+    <button class="price-button" onclick="addItem('كراميل ميكاتو', 1, 2.95)">2.95 JOD</button>
+</div>
+
+<div class="item">
+    <span>قهوة فرنسية</span>
+    <button class="price-button" onclick="addItem('قهوة فرنسية', 1, 2.95)">2.95 JOD</button>
+</div>
+
+<div class="item">
+    <span>سبانيش لاتيه</span>
+    <button class="price-button" onclick="addItem('سبانيش لاتيه', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>كوفي موكا</span>
+    <button class="price-button" onclick="addItem('كوفي موكا', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>وايت موكا</span>
+    <button class="price-button" onclick="addItem('وايت موكا', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>هوت شوكليت طلة القدس</span>
+    <button class="price-button" onclick="addItem('هوت شوكليت طلة القدس', 1, 3.50)">3.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>هوت شوكليت بندق / جوز هند</span>
+    <button class="price-button" onclick="addItem('هوت شوكليت بندق / جوز هند', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>قهوة طلة القدس</span>
+    <button class="price-button" onclick="addItem('قهوة طلة القدس', 1, 2.95)">2.95 JOD</button>
+</div>
+
+<div class="item">
+    <span>نسكافيه</span>
+    <button class="price-button" onclick="addItem('نسكافيه', 1, 2.25)">2.25 JOD</button>
+</div>
+
+<div class="item">
+    <span>قهوة استوائية</span>
+    <button class="price-button" onclick="addItem('قهوة استوائية', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>افكاتو</span>
+    <button class="price-button" onclick="addItem('افكاتو', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>كريم بورليه</span>
+    <button class="price-button" onclick="addItem('كريم بورليه', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>شاي</span>
+    <button class="price-button" onclick="addItem('شاي', 1, 1.00)">1.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>بندول الطلة</span>
+    <button class="price-button" onclick="addItem('بندول الطلة', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>زهورات</span>
+    <button class="price-button" onclick="addItem('زهورات', 1, 1.00)">1.00 JOD</button>
+</div>
+
+<!-- Hot Beverages -->
+<div class="item">
+    <span>سحلب طلة القدس</span>
+    <button class="price-button" onclick="addItem('سحلب طلة القدس', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>شاي كرك</span>
+    <button class="price-button" onclick="addItem('شاي كرك', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>حليب و ورد و زعفران</span>
+    <button class="price-button" onclick="addItem('حليب و ورد و زعفران', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>زنجبيل بالحليب</span>
+    <button class="price-button" onclick="addItem('زنجبيل بالحليب', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>زنجبيل و عسل و ليمون</span>
+    <button class="price-button" onclick="addItem('زنجبيل و عسل و ليمون', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>قرفة و جوز</span>
+    <button class="price-button" onclick="addItem('قرفة و جوز', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>شوربة عدس</span>
+    <button class="price-button" onclick="addItem('شوربة عدس', 1, 2.00)">2.00 JOD</button>
+</div>
+
+        
       </div>      
      
   </div>
@@ -832,99 +986,92 @@ h1 {
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        <div class="item">
-          <span>فرابيه طلة القدس</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فرابيه كرمل</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>موكا فرابيه</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فرابيه ڤنيلا</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>آيس لاتيه</span>
-          <span>( اختار النكهة )</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>آيس موكا</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>آيس وايت موكا</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>آيس كراميل ميكاتو</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>آيس تي</span>
-          <span>خوخ / ليمون / باشن فروت</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>موهيتو كلاسك</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>موهيتو باشن فروت</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>موهيتو باشن فروت</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>موهيتو ورد</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>موهيتو راز بيري</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>مكس الطاقة</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>مكس بلو اوشن</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>مشروبات غازية</span>
-          <span>( بيبسي / ميرندا / سفن )</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>شنينة</span>
-          <div class="price">1.00 JOD</div>
-      </div>
-      
+        <!-- Cold Beverages -->
+<div class="item">
+    <span>فرابيه طلة القدس</span>
+    <button class="price-button" onclick="addItem('فرابيه طلة القدس', 1, 3.50)">3.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>فرابيه كرمل</span>
+    <button class="price-button" onclick="addItem('فرابيه كرمل', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>موكا فرابيه</span>
+    <button class="price-button" onclick="addItem('موكا فرابيه', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>فرابيه ڤنيلا</span>
+    <button class="price-button" onclick="addItem('فرابيه ڤنيلا', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>آيس لاتيه</span>
+    <button class="price-button" onclick="addItem('آيس لاتيه', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>آيس موكا</span>
+    <button class="price-button" onclick="addItem('آيس موكا', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>آيس وايت موكا</span>
+    <button class="price-button" onclick="addItem('آيس وايت موكا', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>آيس كراميل ميكاتو</span>
+    <button class="price-button" onclick="addItem('آيس كراميل ميكاتو', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>آيس تي</span>
+    <button class="price-button" onclick="addItem('آيس تي', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>موهيتو كلاسك</span>
+    <button class="price-button" onclick="addItem('موهيتو كلاسك', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>موهيتو باشن فروت</span>
+    <button class="price-button" onclick="addItem('موهيتو باشن فروت', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>موهيتو ورد</span>
+    <button class="price-button" onclick="addItem('موهيتو ورد', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>موهيتو راز بيري</span>
+    <button class="price-button" onclick="addItem('موهيتو راز بيري', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>مكس الطاقة</span>
+    <button class="price-button" onclick="addItem('مكس الطاقة', 1, 3.50)">3.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>مكس بلو اوشن</span>
+    <button class="price-button" onclick="addItem('مكس بلو اوشن', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>مشروبات غازية</span>
+    <button class="price-button" onclick="addItem('مشروبات غازية', 1, 1.00)">1.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>شنينة</span>
+    <button class="price-button" onclick="addItem('شنينة', 1, 1.00)">1.00 JOD</button>
+</div>
+
       
     </div>
     
@@ -936,60 +1083,63 @@ h1 {
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        <div class="item">
-          <span>🍊برتقال</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍋ليمون</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍋🍃ليمون ونعنع</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🥝كيوي</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍓فراولة</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🥭مانجا</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍍أناناس</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍓🥝كيوي و فرولة</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍓🥭فرولة و منجا</span>
-          <div class="price">2.99 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🥝🍋كيوي و ليمون</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🥭🍓🥝مكس فروت</span>
-          <div class="price">2.99 JOD</div>
-      </div>
+       <!-- Fresh Juices -->
+<div class="item">
+    <span>🍊برتقال</span>
+    <button class="price-button" onclick="addItem('برتقال', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍋ليمون</span>
+    <button class="price-button" onclick="addItem('ليمون', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍋🍃ليمون ونعنع</span>
+    <button class="price-button" onclick="addItem('ليمون ونعنع', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>🥝كيوي</span>
+    <button class="price-button" onclick="addItem('كيوي', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍓فراولة</span>
+    <button class="price-button" onclick="addItem('فراولة', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🥭مانجا</span>
+    <button class="price-button" onclick="addItem('مانجا', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍍أناناس</span>
+    <button class="price-button" onclick="addItem('أناناس', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍓🥝كيوي و فرولة</span>
+    <button class="price-button" onclick="addItem('كيوي و فرولة', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍓🥭فرولة و منجا</span>
+    <button class="price-button" onclick="addItem('فرولة و منجا', 1, 2.99)">2.99 JOD</button>
+</div>
+
+<div class="item">
+    <span>🥝🍋كيوي و ليمون</span>
+    <button class="price-button" onclick="addItem('كيوي و ليمون', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>🥭🍓🥝مكس فروت</span>
+    <button class="price-button" onclick="addItem('مكس فروت', 1, 2.99)">2.99 JOD</button>
+</div>
+
+        
       
     </div>
     
@@ -1000,91 +1150,93 @@ h1 {
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        <div class="item">
-          <span>🍌موز وحليب</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🥑أفوكادو مع عسل وفستق حلبي</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍋ليمون سموذي</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍋🍃ليمون ونعنع سموذي</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🥭منجا سموذي</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍓فرولة سموذي</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🥗روكا ليمونيد</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍓ستروبري سور</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍍بيناكولادا</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍹جمايكا</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍹بندول الطلة (الله الشافي بس احنا بنحاول)</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🥥كوكو لافندر</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍍🍑باشن فروت كريمي</span>
-          <div class="price">3.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍹بورتا إبل</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍹سمر ديلايت</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍹ديلايت طلة القدس</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍹بلادي ميري</span>
-          <div class="price">2.50 JOD</div>
-      </div>
-      
+       <!-- Smoothies and Shakes -->
+<div class="item">
+    <span>موز وحليب</span>
+    <button class="price-button" onclick="addItem('موز وحليب', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>أفوكادو مع عسل وفستق حلبي</span>
+    <button class="price-button" onclick="addItem('أفوكادو', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>ليمون سموذي</span>
+    <button class="price-button" onclick="addItem('ليمون سموذي', 1, 2.00)">2.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>ليمون ونعنع سموذي</span>
+    <button class="price-button" onclick="addItem('ليمون ونعنع سموذي', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>منجا سموذي</span>
+    <button class="price-button" onclick="addItem('منجا سموذي', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>فرولة سموذي</span>
+    <button class="price-button" onclick="addItem('فرولة سموذي', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>روكا ليمونيد</span>
+    <button class="price-button" onclick="addItem('روكا ليمونيد', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>ستروبري سور</span>
+    <button class="price-button" onclick="addItem('ستروبري سور', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>بيناكولادا</span>
+    <button class="price-button" onclick="addItem('بيناكولادا', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>جمايكا</span>
+    <button class="price-button" onclick="addItem('جمايكا', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>بندول الطلة (الله الشافي بس احنا بنحاول)</span>
+    <button class="price-button" onclick="addItem('بندول الطلة', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>كوكو لاڤندر</span>
+    <button class="price-button" onclick="addItem('كوكو لاڤندر', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>باشن فروت كريمي</span>
+    <button class="price-button" onclick="addItem('باشن فروت كريمي', 1, 3.25)">3.25 JOD</button>
+</div>
+
+<div class="item">
+    <span>بورتا إبل</span>
+    <button class="price-button" onclick="addItem('بورتا إبل', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>سمر ديلايت</span>
+    <button class="price-button" onclick="addItem('سمر ديلايت', 1, 2.50)">2.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>ديلايت طلة القدس</span>
+    <button class="price-button" onclick="addItem('ديلايت طلة القدس', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>بلادي ميري</span>
+    <button class="price-button" onclick="addItem('بلادي ميري', 1, 2.50)">2.50 JOD</button>
+</div>
+
+        
     </div>
     
   </div>
@@ -1093,21 +1245,23 @@ h1 {
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        <div class="item">
-          <span> شيك طلة القدس ريد ڤيلڤت (اشي من الاخر )</span>
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span> شيك نورمل ( ڤنيلا / شوكلت / فرولة )</span>
-          <div class="price">2.75 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span> شيك سبشل ( اوريو / سنكرز / لوتس / كروكان / عربية / تشيز كيك )</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
+        <!-- Shakes -->
+<div class="item">
+    <span>شيك طلة القدس ريد ڤيلڤت (اشي من الاخر)</span>
+    <button class="price-button" onclick="addItem('شيك طلة القدس ريد ڤيلڤت', 1, 3.50)">3.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>شيك نورمل (ڤنيلا / شوكلت / فرولة)</span>
+    <button class="price-button" onclick="addItem('شيك نورمل', 1, 2.75)">2.75 JOD</button>
+</div>
+
+<div class="item">
+    <span>شيك سبشل (اوريو / سنكرز / لوتس / كروكان / عربية / تشيز كيك)</span>
+    <button class="price-button" onclick="addItem('شيك سبشل', 1, 3.00)">3.00 JOD</button>
+</div>
+
+        
     </div>
     
   </div>
@@ -1118,30 +1272,33 @@ h1 {
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        <div class="item">
-          <span>🍦إيس كريم سبشل ( أوريو / كروكان / تشيز كيك / عربية / لوتس / سنكرز )</span>
-          <div class="price">2.25 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍦ايس كريم نورمل ( فرولة / ڤنيلا / شوكلت )</span>
-          <div class="price">1.99 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍦سنو ليدي</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍦توتي فروتي</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍦ثريو تشوكلت</span>
-          <div class="price">3.00 JOD</div>
-      </div>
+       <!-- Ice Creams -->
+<div class="item">
+    <span>إيس كريم سبشل (أوريو / كروكان / تشيز كيك / عربية / لوتس / سنكرز)</span>
+    <button class="price-button" onclick="addItem('إيس كريم سبشل', 1, 2.25)">2.25 JOD</button>
+</div>
+
+<div class="item">
+    <span>ايس كريم نورمل (فرولة / ڤنيلا / شوكلت)</span>
+    <button class="price-button" onclick="addItem('ايس كريم نورمل', 1, 1.99)">1.99 JOD</button>
+</div>
+
+<div class="item">
+    <span>سنو ليدي</span>
+    <button class="price-button" onclick="addItem('سنو ليدي', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>توتي فروتي</span>
+    <button class="price-button" onclick="addItem('توتي فروتي', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>ثريو تشوكلت</span>
+    <button class="price-button" onclick="addItem('ثريو تشوكلت', 1, 3.00)">3.00 JOD</button>
+</div>
+
+        
       
     </div>
     
@@ -1151,55 +1308,58 @@ h1 {
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        <div class="item">
-          <span>🍏🍎تفاحتين نخلة</span>
-          <div class="price">4.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍏🍎تفاحتين مزايا</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍋🍃ليمون ونعنع</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍉🍃بطيخ ونعنع</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍇🫐عنب وتوت</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>علكة ونعنع</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🫐بلوبيري</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>علكة سهم</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>LOVE❤️</span>
-          <div class="price">4.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>🍇عنب</span>
-          <div class="price">4.00 JOD</div>
-      </div>
+<!-- Fresh Juices -->
+<div class="item">
+    <span>🍏🍎 تفاحتين نخلة</span>
+    <button class="price-button" onclick="addItem('تفاحتين نخلة', 1, 4.50)">4.50 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍏🍎 تفاحتين مزايا</span>
+    <button class="price-button" onclick="addItem('تفاحتين مزايا', 1, 4.00)">4.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍋🍃 ليمون ونعنع</span>
+    <button class="price-button" onclick="addItem('ليمون ونعنع', 1, 4.00)">4.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍉🍃 بطيخ ونعنع</span>
+    <button class="price-button" onclick="addItem('بطيخ ونعنع', 1, 4.00)">4.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍇🫐 عنب وتوت</span>
+    <button class="price-button" onclick="addItem('عنب وتوت', 1, 4.00)">4.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>علكة ونعنع</span>
+    <button class="price-button" onclick="addItem('علكة ونعنع', 1, 4.00)">4.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🫐 بلوبيري</span>
+    <button class="price-button" onclick="addItem('بلوبيري', 1, 4.00)">4.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>علكة سهم</span>
+    <button class="price-button" onclick="addItem('علكة سهم', 1, 4.00)">4.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>LOVE ❤️</span>
+    <button class="price-button" onclick="addItem('LOVE', 1, 4.00)">4.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>🍇 عنب</span>
+    <button class="price-button" onclick="addItem('عنب', 1, 4.00)">4.00 JOD</button>
+</div>
+
+        
       
     </div>
     
@@ -1210,51 +1370,169 @@ h1 {
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
         <div class="item">
-          <span>كريب كلاسيك</span>
-         
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>وافل</span>
-      
-          <div class="price">3.50 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فخارة أم علي (5أشخاص)</span>
-          <div class="price">6.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>فخارة ام علي (شخصين)</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>تيرامسو</span>
-          <div class="price">3.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>حلو خشخش</span>
-          <div class="price">2.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>قالب كيك وسط 10 أشخاص</span>
-          <div class="price">10.00 JOD</div>
-      </div>
-      
-      <div class="item">
-          <span>مهلبية</span>
-          <div class="price">2.00 JOD</div>
-      </div>
+            <span>كريب كلاسيك</span>
+            <button class="price-button">3.50 JOD</button>
+        </div>
+        
+        <!-- Desserts -->
+<div class="item">
+    <span>كيكة طلة القدس</span>
+    <button class="price-button" onclick="addItem('كيكة طلة القدس', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>كريب كلاسيك</span>
+    <button class="price-button" onclick="addItem('كريب كلاسيك', 1, 3.50)">3.50 JOD</button>
+    <div class="options">
+        <label>اضافة فواكة (فرولة +كيوي +موز): 0.75 JOD</label>
+        <label>اضافة شوكلت (m&m او flake او orea او kinder): 0.50 JOD</label>
+        <label>اضافة سكوب ايس كريم: 0.75 JOD</label>
+    </div>
+</div>
+
+<div class="item">
+    <span>وافل</span>
+    <button class="price-button" onclick="addItem('وافل', 1, 3.50)">3.50 JOD</button>
+    <div class="options">
+        <label>اضافة فواكة (فرولة +كيوي +موز): 0.75 JOD</label>
+        <label>اضافة شوكلت (m&m او flake او orea او kinder): 0.50 JOD</label>
+        <label>اضافة سكوب ايس كريم: 0.75 JOD</label>
+    </div>
+</div>
+
+<div class="item">
+    <span>فخارة أم علي (5أشخاص)</span>
+    <button class="price-button" onclick="addItem('فخارة أم علي (5أشخاص)', 1, 6.00)">6.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>فخارة ام علي (شخصين)</span>
+    <button class="price-button" onclick="addItem('فخارة ام علي (شخصين)', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>تيرامسو</span>
+    <button class="price-button" onclick="addItem('تيرامسو', 1, 3.00)">3.00 JOD</button>
+</div>
+
+<div class="item">
+
+    <span>حلو خشخش</span>
+    <button class="price-button" onclick="addItem('حلو خشخش', 1, 2.00)">2.00 JOD</button>
+    
+</div>
+
+<div class="item">
+    <span>قالب كيك وسط 10 أشخاص</span>
+    <button class="price-button" onclick="addItem('قالب كيك وسط 10 أشخاص', 1, 10.00)">10.00 JOD</button>
+</div>
+
+<div class="item">
+    <span>مهلبية</span>
+    <button class="price-button" onclick="addItem('مهلبية', 1, 2.00)">2.00 JOD</button>
+</div>
+
+        
       
     </div>
     
   </div>
 </div>
+
+
+
+
+
+<div class="popup-container" id="popup">
+    <div class="popup-content">
+        <p>This is your receipt:</p>
+
+        <ul id="receipt-list">
+            <!-- Receipt items will be added dynamically here -->
+        </ul>
+
+        <p>Total: <span id="total">0.00 JOD</span></p>
+
+        <button class="clear-button" onclick="clearItems()">Clear Items</button>
+    </div>
+</div>
+
+
+<button class="popup-button" onclick="togglePopup()">
+    <img src="https://i.postimg.cc/NMYHqwcK/removebg-preview.png" alt="Image Alt Text">
+</button>
+
+<script>
+    function togglePopup() {
+        var popup = document.getElementById("popup");
+        if (popup.style.display === "block") {
+            popup.style.display = "none";
+        } else {
+            popup.style.display = "block";
+        }
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+
+
+<script>
+    let receipt = [];
+    let total = 0;
+
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+    function addItem(itemName, quantity, price) {
+        const itemTotal = quantity * price;
+        total += itemTotal;
+
+        receipt.push({
+            itemName: itemName,
+            quantity: quantity,
+            price: price,
+            total: itemTotal
+        });
+
+        updateReceipt();
+        updateTotal();
+    }
+
+    function updateReceipt() {
+        const receiptList = document.getElementById("receipt-list");
+        receiptList.innerHTML = '';
+
+        receipt.forEach(item => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${item.itemName} x${item.quantity} - ${item.total.toFixed(2)} JOD`;
+            receiptList.appendChild(listItem);
+        });
+    }
+
+    function updateTotal() {
+        document.getElementById("total").innerText = total.toFixed(2) + " JOD";
+    }
+
+    function clearItems() {
+        const confirmation = confirm("Are you sure you want to clear the items?");
+        if (confirmation) {
+            // Clear the receipt list and total
+            receipt = [];
+            total = 0;
+            updateReceipt();
+            updateTotal();
+        }
+    }
+</script>
+
 
 <script>
 
